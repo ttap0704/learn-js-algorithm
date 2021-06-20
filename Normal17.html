@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 중복 단어 제거
+
+    // filter는 콜백함수를 인자로 받고
+    // true일 때만 넣어줌
+
+    function solution (arr) {
+      let answer;
+      
+      answer = arr.filter((v, i) => {
+        return arr.indexOf(v) == i
+      })
+
+      return answer;
+    }
+
+    let arr = ["good", "time", "good", "time", "student"]
+
+    console.log(solution(arr))
+  </script>
+</body>
+</html>
