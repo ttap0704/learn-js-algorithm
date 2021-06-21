@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 제일 앞에서 보이는 사람 수 구하기
+    function solution(arr) {
+      let answer = 0;
+      let max = arr[0]
+
+      answer++;
+
+      for (let i = 1; i < arr.length; i++) {
+        if (max < arr[i]) {
+          answer++;
+          max = arr[i]
+        }
+      }
+
+
+      return answer;
+    }
+
+    let arr = [130, 135, 148, 140, 145, 150, 150, 153]
+    console.log(solution(arr))
+  </script>
+</body>
+
+</html>
